@@ -1,0 +1,17 @@
+[package]
+name = "tictac"
+version = "0.1.0"
+edition = "2024"
+description = "Cross-platform terminal Tic-Tac-Toe with 2-player mode and Easy/Medium/Hard AI in a fixed TUI frame"
+license = "MIT"
+keywords = ["tic-tac-toe", "game", "tui", "terminal", "cli"]
+categories = ["games", "command-line-utilities"]
+
+[dependencies]
+crossterm = "0.28"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+strip = true
